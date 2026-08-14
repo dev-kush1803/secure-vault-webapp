@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SecureVault — Sign In</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-card card" id="auth-container">
+
+    <div id="signin-pane">
+      <div class="logo-block">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l7 4v5c0 5-3 9-7 11-4-2-7-6-7-11V6l7-4z"
+            stroke="#00ffb3" stroke-width="1.2" fill="rgba(0,0,0,0.2)" />
+        </svg>
+        <h1>SecureVault</h1>
+        <p class="muted small">Sign in to your account</p>
+      </div>
+
+      <form id="login-form" class="form">
+        <input id="login-email" type="email" placeholder="Email" required />
+        <input id="login-pass" type="password" placeholder="Password" required />
+        <button id="btn-login" class="btn primary">Sign In</button>
+      </form>
+
+      <p class="muted small center">
+        Don’t have an account?
+        <a href="#" id="goto-signup" class="accent-link">Sign up</a>
+      </p>
+    </div>
+
+    <div id="signup-pane" class="hidden">
+      <div class="logo-block">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l7 4v5c0 5-3 9-7 11-4-2-7-6-7-11V6l7-4z"
+            stroke="#00ffb3" stroke-width="1.2" fill="rgba(0,0,0,0.2)" />
+        </svg>
+        <h1>Create Account</h1>
+        <p class="muted small">Join SecureVault</p>
+      </div>
+
+      <form id="signup-form" class="form">
+        <input id="signup-email" type="email" placeholder="Email" required />
+        <input id="signup-pass" type="password" placeholder="Password" required />
+        <input id="signup-pass2" type="password" placeholder="Confirm password" required />
+        <button id="btn-signup" class="btn primary">Create Account</button>
+      </form>
+
+      <p class="muted small center">
+        Already have an account?
+        <a href="#" id="goto-signin" class="accent-link">Sign in</a>
+      </p>
+    </div>
+
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

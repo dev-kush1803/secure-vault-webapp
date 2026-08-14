@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SecureVault — Security Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <aside id="sidebar"></aside>
+
+  <main class="main">
+    <header class="topbar card">
+      <div>
+        <h2>Security Hub</h2>
+        <p class="muted small">Overview of your vault security and tools</p>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn ghost">Light Mode</button>
+        <div class="profile-circle" title="Profile">👤</div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card score-card">
+        <h3>Overall Security Score</h3>
+        <div class="score">40<span class="percent">%</span></div>
+        <p class="muted small">Based on 5 passwords</p>
+      </div>
+
+      <div class="card">
+        <h3>AI-Powered Analysis</h3>
+        <p class="muted">Get personalized recommendations to improve your security score.</p>
+        <button class="btn primary">Generate AI Report</button>
+      </div>
+
+      <div class="card wide">
+        <div class="tabs">
+          <button class="tab active">Password Generator</button>
+          <button class="tab">Password Analyzer</button>
+        </div>
+
+        <div class="tab-panel">
+          <textarea class="pw-display" readonly placeholder="Your new password..."></textarea>
+          <div class="row between">
+            <label>Length <span id="pw-length">16</span></label>
+            <input id="pw-range" type="range" min="6" max="32" value="16">
+          </div>
+
+          <div class="pw-options row">
+            <label><input type="checkbox" checked> Uppercase</label>
+            <label><input type="checkbox" checked> Lowercase</label>
+            <label><input type="checkbox" checked> Numbers</label>
+            <label><input type="checkbox" checked> Symbols</label>
+          </div>
+
+          <button class="btn primary big">Generate</button>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <h3>Your Credentials</h3>
+        <div class="controls row between">
+          <input placeholder="Search by website or username..." class="search-input" />
+          <div class="row">
+            <button class="btn ghost">🗑 Recycle Bin</button>
+            <button class="btn primary">Add New</button>
+          </div>
+        </div>
+
+        <table class="pw-table">
+          <thead><tr><th>Website</th><th>Username</th><th>Password</th><th>Strength</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>social-media.com</td><td>user@email.com</td><td>••••••••</td><td><div class="bar yellow" style="width:40%"></div></td><td class="actions">👁️ ✂️ ✏️ 🗑️</td></tr>
+            <tr><td>online-bank.com</td><td>user@email.com</td><td>••••••••</td><td><div class="bar blue" style="width:70%"></div></td><td class="actions">👁️ ✂️ ✏️ 🗑️</td></tr>
+            <tr><td>shopping-site.net</td><td>user@email.com</td><td>••••••••</td><td><div class="bar red" style="width:30%"></div></td><td class="actions">👁️ ✂️ ✏️ 🗑️</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/sidebar.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/theme.js"></script>
+</body>
+</html>
